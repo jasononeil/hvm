@@ -1,6 +1,6 @@
 {
 	"name": "hvm",
-	"license": "PUBLIC",
+	"license": "Public",
 	"tags": ["tool","haxe","version-manager"],
 	"description": "HVM - a tool for compiling and switching between different Haxe versions with ease.",
 	"contributors": ["jason"],
