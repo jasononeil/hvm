@@ -1,0 +1,11 @@
+-cp src
+-lib mcli
+-main hvm.Main
+-neko hvm.n
+
+--next 
+
+-cp src
+-lib mcli
+-main hvm.HaxelibTool
+-neko run.n
