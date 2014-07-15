@@ -38,6 +38,12 @@ For `version`, you can use any git reference - a branch, a tag, a commit hash, e
     haxelib run hvm --use 3.1.3 # Use 3.1.3
     haxelib run hvm --use development # Use the latest development version
 
+### Known bugs
+
+When you use `haxelib run hvm` some installations actually use Haxe to compile/run haxelib, then haxelib runs and calls `haxe/lib/hvm/0.0.2/run.n`. This is all well and good, until `hvm` tries to replace the Haxe binary, and the OS complains.  A workaround is to use something along the lines of:
+
+    sudo neko /usr/lib/haxe/lib/hvm/0,0,2/hvm.n --use development
+
 ### Implementation Details
 
 * This works by downloading the Haxe repo from GIT, checking out the appropriate tag/branch/commit, and compiling it. 
