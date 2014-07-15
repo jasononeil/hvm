@@ -1,0 +1,12 @@
+{
+	"name": "hvm",
+	"license": "PUBLIC",
+	"tags": ["tool","haxe","version-manager"],
+	"description": "HVM - a tool for compiling and switching between different Haxe versions with ease.",
+	"contributors": ["jason"],
+	"releasenote": "Initial release. Works on Ubuntu if you already have build dependencies installed. Might work on Mac. Throws error on Windows, but Pull Requests welcome (should be easy).",
+	"version": "0.0.1",
+	"url": "https://github.com/jasononeil/hvm",
+	"classPath": "src/",
+	"dependencies": {}
+}
