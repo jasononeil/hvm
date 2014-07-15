@@ -18,22 +18,19 @@ In future we plan to support a bootstrapped version that can run without Haxe in
 
 ```
 jason@jason-laptop:~$ haxelib run hvm
-The Haxe Version Manager 0.0.1
+The Haxe Version Manager 0.0.2
 
   --use <version>          Install a version and set it as current.
-  --install <version>      Install a version (if it isn't already). This 
-                           fetches any updates in the repo, compiles it, and stores it 
-                           in the repo. 
-  --set <version>          Set an already installed version as current. 
-                           Basically this copies a precompiled binary and standard 
-                           library to the right location for them to be on the system. 
+  --install <version>      Compile a specific version and add it to the HVM 
+                           repo. Does not affect the system version. 
+  --set <version>          Set an already installed version as current. This 
+                           copies a pre-compiled binary / stdlib to the appropriate 
+                           system folder. 
   --remove <version>       Remove an installed version. Please note this 
                            removes it from the HVM repo, it does not affect the 
                            currently installed version on the system. 
-  --reinstall <version>    Remove a version, reinstall, set as current. Same 
-                           as calling remove, install, set. 
-  --list                   List versions that have already been installed and 
-                           are available to be set. 
+  --reinstall <version>    Remove a version, reinstall, set as current.
+  --list                   List all installed versions.
 ```
 
 For `version`, you can use any git reference - a branch, a tag, a commit hash, etc.  For example:
@@ -51,4 +48,4 @@ For `version`, you can use any git reference - a branch, a tag, a commit hash, e
 	* This assumes you have your Haxe binary at `/usr/lib/haxe/haxe` and the standard library at `/usr/lib/haxe/std/`. It would be nice to make this configurable.
 	* This will place your repo in `~/.hvm/`, where `~` is your home directory, found using the `HOME` environment variable.
 * On Windows:
-	* We are lacking an implementation, but it should be dead easy. See <src/hvm/platform/WinConfig.hx>. Pull requests welcome.
+	* We are lacking an implementation, but it should be dead easy. See <https://github.com/jasononeil/hvm/blob/master/src/hvm/platform/WinConfig.hx>. Pull requests welcome.

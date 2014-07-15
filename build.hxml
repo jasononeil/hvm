@@ -6,6 +6,5 @@
 --next 
 
 -cp src
--lib mcli
 -main hvm.HaxelibTool
 -neko run.n

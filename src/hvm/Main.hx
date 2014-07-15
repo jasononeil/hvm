@@ -13,7 +13,7 @@ using haxe.io.Path;
 using StringTools;
 
 /**
-	The Haxe Version Manager 0.0.1
+	The Haxe Version Manager 0.0.2
 **/
 class Main extends CommandLine {
 	public static function main() {
@@ -55,9 +55,9 @@ class Main extends CommandLine {
 	}
 
 	/**
-		Install a version (if it isn't already).
+		Compile a specific version and add it to the HVM repo.
 
-		This fetches any updates in the repo, compiles it, and stores it in the repo.
+		Does not affect the system version.
 	**/
 	public function install( version:String ) {
 		InitHVM.createRepo( pc );
@@ -81,9 +81,9 @@ class Main extends CommandLine {
 	}
 
 	/**
-		Set an already installed version as current.
+		Set an already installed version as current. 
 
-		Basically this copies a precompiled binary and standard library to the right location for them to be on the system.
+		This copies a pre-compiled binary / stdlib to the appropriate system folder.
 	**/
 	public function set( version:String ) {
 		InitHVM.createRepo( pc );
@@ -118,8 +118,6 @@ class Main extends CommandLine {
 
 	/**
 		Remove a version, reinstall, set as current.
-
-		Same as calling remove, install, set.
 	**/
 	public function reinstall( version:String ) {
 		InitHVM.createRepo( pc );
@@ -130,7 +128,7 @@ class Main extends CommandLine {
 	}
 
 	/**
-		List versions that have already been installed and are available to be set.
+		List all installed versions.
 	**/
 	public function list() {
 		InitHVM.createRepo( pc );
