@@ -24,7 +24,7 @@ class UnixConfig implements PlatformConfig {
 		var oldCwd = Sys.getCwd();
 		try {
 			Sys.setCwd( hvmRepo+HaxeRepoTools.repoFolder );
-			run( "make", [] );
+			run( "make", ["ADD_REVISION=1", "OCAMLOPT=ocamlopt.opt"] );
 			Sys.setCwd( oldCwd );
 		}
 		catch ( e:Dynamic ) {
