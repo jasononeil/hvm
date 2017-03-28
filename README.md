@@ -1,3 +1,11 @@
+# ABANDONED NOTICE:
+
+This project is abandoned.
+
+If you want a similar tool, I recommend the one David Peek created with the same name: https://github.com/dpeek/hvm
+
+If you want a better tool, I recommend using Docker and the Haxe docker image for each project. See https://hub.docker.com/_/haxe/
+
 # Haxe Version Manager (HVM)
 
 A version manager for Haxe that lets you switch between multiple Haxe versions easily.
