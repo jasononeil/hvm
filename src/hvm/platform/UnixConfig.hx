@@ -16,8 +16,8 @@ class UnixConfig implements PlatformConfig {
 		hvmRepo = Sys.getEnv( 'HOME' ).addTrailingSlash() + '.hvm/';
 
 		// TODO: a better way to get these, check env variables or `path haxe` etc.
-		haxeBinary = '/usr/lib/haxe/haxe';
-		stdLib = '/usr/lib/haxe/std/';
+		haxeBinary = '/usr/local/lib/haxe/haxe';
+		stdLib = '/usr/local/lib/haxe/std/';
 	}
 
 	public function build() {
